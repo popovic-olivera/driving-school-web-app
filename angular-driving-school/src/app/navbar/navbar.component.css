@@ -1,0 +1,93 @@
+#nav {
+    position: absolute;
+    border-bottom: 1px solid #e9ecef;
+    background-color: white;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+  
+#nav .navbar-brand {
+    font-weight: 800;
+    color: #343a40;
+}
+
+#nav .navbar-toggler {
+    font-size: 16px;
+    padding: 8px;
+}
+ 
+#nav .navbar-nav > li.nav-item > a {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#nav .navbar-nav > li.nav-pills > a.active {
+    background-color: rgb(74, 156, 92);
+    color: white;
+}
+
+@media only screen and (min-width: 992px) {
+    #nav {
+      border-bottom: 1px solid transparent;
+      background: transparent;
+    }
+
+    #nav .navbar-brand {
+      padding: 10px 20px;
+      color: #fff;
+    }
+
+    #nav .navbar-brand:focus, #nav .navbar-brand:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    #nav .navbar-nav > li.nav-item > a {
+      padding: 10px 20px;
+      color: #fff;
+    }
+
+    #nav .navbar-nav > li.nav-item > a:focus, #nav .navbar-nav > li.nav-item > a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+}
+  
+@media only screen and (min-width: 992px) {
+    #nav {
+      transition: background-color 0.2s;
+      transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+    }
+
+    #nav.is-fixed {
+      /* When the user scrolls down, hide the header right above the viewport */
+      position: fixed;
+      top: -67px;
+      transition: transform 0.2s;
+      border-bottom: 1px solid white;
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    #nav.is-fixed .navbar-brand {
+      color: #212529;
+    }
+
+    #nav.is-fixed .navbar-brand:focus, #nav.is-fixed .navbar-brand:hover {
+      color: #0085A1;
+    }
+
+    #nav.is-fixed .navbar-nav > li.nav-item > a {
+      color: #212529;
+    }
+
+    #nav.is-fixed .navbar-nav > li.nav-item > a:focus, #nav.is-fixed .navbar-nav > li.nav-item > a:hover {
+      color: #0085A1;
+    }
+
+    #nav.is-visible {
+      /* If user changes the scrolling direction, show the header */
+      transform: translate3d(0, 100%, 0);
+    }
+}
