@@ -11,6 +11,7 @@ import { AboutSchoolComponent } from './about-school/about-school.component';
 import { PricelistComponent } from './pricelist/pricelist.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     AboutSchoolComponent,
     PricelistComponent,
     ContactComponent,
-    SignInComponent
+    SignInComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
