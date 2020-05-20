@@ -2,7 +2,7 @@
 
     <div class="container">
 
-      <a class="navbar-brand" href="">Auto Škola Srećko</a>
+      <a class="navbar-brand" [routerLink]="['/']">Auto Škola Srećko</a>
 
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -12,23 +12,23 @@
 
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="">Početna</a>
+            <a class="nav-link" [routerLink]="['/']">Početna</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="">O školi</a>
+            <a class="nav-link" [routerLink]="['/aboutSchool']">O školi</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="">Cenovnik</a>
+            <a class="nav-link" [routerLink]="['/pricelist']">Cenovnik</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="">Kontakt</a>
+            <a class="nav-link" [routerLink]="['/contact']">Kontakt</a>
           </li>
           
           <li class="nav-item nav-pills">
-            <a class="nav-link active" href="">Prijava</a>
+            <a class="nav-link active" [routerLink]="['/signIn']">Prijava</a>
           </li>
         </ul>
 

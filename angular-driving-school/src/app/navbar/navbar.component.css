@@ -22,7 +22,7 @@
     text-transform: uppercase;
     margin-left: 5px;
     margin-right: 5px;
-}
+}                     
 
 #nav .navbar-nav > li.nav-pills > a.active {
     background-color: rgb(74, 156, 92);
@@ -75,7 +75,7 @@
     }
 
     #nav.is-fixed .navbar-brand:focus, #nav.is-fixed .navbar-brand:hover {
-      color: #0085A1;
+      color: #4a9c5c;
     }
 
     #nav.is-fixed .navbar-nav > li.nav-item > a {
@@ -83,11 +83,15 @@
     }
 
     #nav.is-fixed .navbar-nav > li.nav-item > a:focus, #nav.is-fixed .navbar-nav > li.nav-item > a:hover {
-      color: #0085A1;
+      color: #4a9c5c;
     }
 
     #nav.is-visible {
       /* If user changes the scrolling direction, show the header */
       transform: translate3d(0, 100%, 0);
+    }
+
+    #nav.is-fixed .navbar-nav > li.nav-item > a.active:focus, #nav.is-fixed .navbar-nav > li.nav-item > a.active:hover {
+      color: white;
     }
 }
