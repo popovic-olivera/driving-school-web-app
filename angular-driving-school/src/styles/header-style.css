@@ -1,0 +1,72 @@
+h1, h2, h3 {
+    font-weight: 800;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+  
+header {
+  background: no-repeat center center;
+  background-size: cover;
+  background-attachment: scroll;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+header .backgroundOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.6;
+}
+
+header .siteHeading {
+  padding: 200px 0 150px;
+  color: white;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  header .siteHeading {
+      padding: 200px 0;
+  }
+}
+
+header .siteHeading h1 {
+  font-size: 60px;
+  margin-top: 0;
+  position: relative;
+}
+
+header .siteHeading .subheading {
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.1;
+  margin: 10px 0 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  display: block;
+}
+
+header .siteHeading h1 > img {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+  header .siteHeading h1 {
+      font-size: 80px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  header .siteHeading h1 > img {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      bottom: 40px;
+      right: -30px;
+  }
+}

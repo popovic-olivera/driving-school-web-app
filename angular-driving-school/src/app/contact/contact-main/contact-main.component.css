@@ -1,0 +1,6 @@
+.map {
+    box-shadow: 5px 10px 25px #555;
+    position: relative;
+    z-index: 5;
+    margin-top: 50px;
+}
