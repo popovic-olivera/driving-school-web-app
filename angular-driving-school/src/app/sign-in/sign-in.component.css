@@ -1,0 +1,111 @@
+.form {
+    background: -webkit-linear-gradient(to bottom, #FFB88C, #349763);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFB88C, #349763); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 100%;
+    padding : 50px 0;
+}
+
+.container {
+    background: #fff; 
+    border-radius: 10px; 
+    box-shadow: 15px 20px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+}
+
+.carousel-box {
+    min-height: 500px; 
+    border-radius: 0 10px 10px 0; 
+    padding: 0;
+    position: relative;
+}
+
+.backgroundOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-color: #212529;
+    opacity: 0.7;
+}
+
+.carousel-inner {
+    border-radius: 0 10px 10px 0;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 5%;
+}
+
+.login {
+    padding: 50px 30px; 
+    position: relative;
+}
+
+.login h2 {
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-size: 30px;
+    color: #349763;
+}
+
+.login h2:after {
+    content: " "; 
+    width: 100px; 
+    height: 5px; 
+    background: #FEB58A; 
+    display: block; 
+    margin-top: 20px; 
+    border-radius: 3px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-login { 
+    background: #349763;
+    color: #fff; 
+    font-weight: 600;
+}
+
+.login .bottom {
+    margin-top: 50px;
+}
+
+.login .bottom a {
+    text-decoration: underline;
+}
+
+.login .bottom a:hover {
+    color: #349763;
+}
+
+.banner-text {
+    width: 70%; 
+    position: absolute; 
+    bottom: 100px; 
+    padding-left: 20px;
+}
+
+.banner-text h2 {
+    color: #fff; 
+    font-weight: 600;
+    font-size: 2.5em;
+}
+
+.banner-text h2:after {
+    content: " "; 
+    width: 100px; 
+    height: 5px; 
+    background: #FFF; 
+    display: block; 
+    margin-top: 20px; 
+    border-radius: 3px;
+}
+
+.banner-text p {
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 400;
+}

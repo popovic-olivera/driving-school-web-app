@@ -25,7 +25,7 @@
 }                     
 
 #nav .navbar-nav > li.nav-pills > a.active {
-    background-color: rgb(74, 156, 92);
+    background-color: #349763;
     color: white;
 }
 
@@ -75,7 +75,7 @@
     }
 
     #nav.is-fixed .navbar-brand:focus, #nav.is-fixed .navbar-brand:hover {
-      color: #4a9c5c;
+      color: #349763;
     }
 
     #nav.is-fixed .navbar-nav > li.nav-item > a {
@@ -83,7 +83,7 @@
     }
 
     #nav.is-fixed .navbar-nav > li.nav-item > a:focus, #nav.is-fixed .navbar-nav > li.nav-item > a:hover {
-      color: #4a9c5c;
+      color: #349763;
     }
 
     #nav.is-visible {

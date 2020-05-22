@@ -8,7 +8,7 @@
     
   .post-preview > h2:focus, .post-preview > h2:hover {
     text-decoration: none;
-    color: #4a9c5c;
+    color: #349763;
   }
     
   .post-preview > .post-title {
@@ -62,7 +62,7 @@
   }
     
   .btn-primary {
-    background-color: #4a9c5c;
+    background-color: #349763;
   }
     
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
