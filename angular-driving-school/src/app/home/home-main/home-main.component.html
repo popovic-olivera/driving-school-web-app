@@ -1,73 +1,33 @@
 <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        
+        <h1>Vesti</h1>
 
-        <div class="post-preview">
-            <h2 class="post-title">
-                Poštovani kandidati, <br/> <br/>
-                Obaveštavamo Vas da, dana  4.5.2020. godine
-                škola nastavlja sa radom.
+        <div class="post-preview" *ngFor="let element of news">
+            <h2 class="post-title" >
+               {{element.title}}
             </h2>
             <h3 class="post-subtitle">
-              Dobrodošli! 🍀
+              <a href={{element.link}} target="_blank" *ngIf='element.link !== ""'>KLIKNI OVDE <br/> </a> 
+              
+              {{element.subtitle}}
+
+              <img src={{element.image}} alt="Slika vesti" *ngIf='element.image !== ""'/>
             </h3>
             <p class="post-meta">
-            30. April, 2020.
+            {{element.date}}
             </p>
+
+            <hr>
         </div>
 
-        <hr>
-
-        <div class="post-preview">
-            <h2 class="post-title">
-                Hristos Vaskrse! <br/>
-                Srećan Uskrs!
-            </h2>
-            <h3 class="post-subtitle">
-                <img src="assets/easter.jpg" alt="Uskrs" />
-            </h3>
-          <p class="post-meta">
-            19. April, 2020.</p>
-        </div>
-
-        <hr>
-
-        <div class="post-preview">
-                <h2 class="post-title">
-                    Poštovani kandidati, <br/> <br/>
-                    Sajt za vežbanje pitanja za teorijski ispit
-                    je ponovo aktivan!
-                </h2>
-                <h3 class="post-subtitle">
-                  Sada možete da nastavite sa vežbanjem. Srećno! 🍀
-                </h3>
-              <p class="post-meta">
-                4. April, 2020.</p>
-        </div>
-
-        <hr>
-
-        <div class="post-preview">
-                <h2 class="post-title">
-                    U ovo vreme kada ne radi mup sajt. kandidati mogu vežbati testove na 
-                    <a href="https://sites.google.com/view/asocijacijaautokolasrbije/testovi?fbclid=IwAR38n8ZwX9aY0hcHSJQGrdmF1-Gp87Tio0TmTU7N9Qn4FD5tea77m43Qq4Q">
-                        ovom sajtu.
-                    </a>
-                </h2>
-                <h3 class="post-subtitle">
-                    #ostaniKodKuce
-                </h3>
-              <p class="post-meta">
-                31. Mart, 2020.</p>
-        </div>
-
-        <hr>
-
-        <!-- Pager -->
         <div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Starija obaveštenja &rarr;</a>
+          <a class="btn btn-primary float-right" (click)="loadOlderNews()">Starija obaveštenja &rarr;</a>
         </div>
 
       </div>
     </div>
   </div>
+
+  <hr/>

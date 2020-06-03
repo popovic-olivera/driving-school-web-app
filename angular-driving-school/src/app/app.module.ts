@@ -18,6 +18,7 @@ import { PricelistHeaderComponent } from './pricelist/pricelist-header/pricelist
 import { PricelistMainComponent } from './pricelist/pricelist-main/pricelist-main.component';
 import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
 import { ContactMainComponent } from './contact/contact-main/contact-main.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ContactMainComponent } from './contact/contact-main/contact-main.compon
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
