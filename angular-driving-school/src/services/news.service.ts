@@ -20,9 +20,13 @@ export class NewsService {
   }
 
   loadNews(): Observable<News[]> {
-    this.len += 4;
-    console.log(this.len);
+    this.len += 1;
+    
     return this.http.get<News[]>('assets/json/news.json').pipe(
       map(news => news.filter(n => news.indexOf(n) < this.len)));
+  }
+
+  setLen(value: number) {
+    this.len = value;
   }
 }

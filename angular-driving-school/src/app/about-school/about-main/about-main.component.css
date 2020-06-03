@@ -1,0 +1,17 @@
+.post-preview ul {
+    list-style-position: inside;
+}
+
+.post-preview li {
+    font-size: 30px;
+}
+
+.post-preview li:hover {
+    color: red;
+}
+
+li > img {
+    margin-left: 50px;
+    width: 100px;
+    height: 100px;
+}

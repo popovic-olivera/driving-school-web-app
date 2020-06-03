@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NewsService } from 'src/services/news.service';
 import { News } from 'src/models/news.model';
 
@@ -7,7 +7,7 @@ import { News } from 'src/models/news.model';
   templateUrl: './home-main.component.html',
   styleUrls: ['./home-main.component.css', '../../../styles/main-style.css']
 })
-export class HomeMainComponent implements OnInit {
+export class HomeMainComponent implements OnInit, OnDestroy {
 
   news: News[] = [];
 
@@ -25,5 +25,9 @@ export class HomeMainComponent implements OnInit {
       news => this.news = news,
       error => console.error(error)
     );
+  }
+
+  ngOnDestroy(): void {
+    this.service.setLen(4);
   }
 }

@@ -32,6 +32,7 @@ header .siteHeading {
   color: white;
   text-align: center;
   max-height: 550px;
+  min-height: 550px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -69,8 +70,8 @@ header .siteHeading .subheading {
 
 @keyframes blinkingText{
   0% { color: white; }
-  49% { color: white; }
+  30% { color: lightgray; }
   60% { color: transparent; }
-  99% { color:transparent; }
+  90% { color:transparent; }
   100% { color: white; }
 }
