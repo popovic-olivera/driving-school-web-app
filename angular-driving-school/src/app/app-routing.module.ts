@@ -5,6 +5,7 @@ import { AboutSchoolComponent } from './about-school/about-school.component';
 import { PricelistComponent } from './pricelist/pricelist.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { GalleryComponent } from './gallery/gallery.component';
 
 
 const routes: Routes = [
@@ -12,7 +13,8 @@ const routes: Routes = [
   { path: 'aboutSchool', component: AboutSchoolComponent},
   { path: 'pricelist', component: PricelistComponent},
   { path: 'contact', component: ContactComponent},
-  { path: 'signIn', component: SignInComponent}
+  { path: 'signIn', component: SignInComponent},
+  { path: 'gallery', component: GalleryComponent}
 ];
 
 @NgModule({

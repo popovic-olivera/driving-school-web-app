@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="card-columns">
+      
+      <div class="card" *ngFor="let img of images">
+
+          <img class="card-img-top" [src]="img.source" [alt]="img.title" />
+
+          <div class="card-body">
+
+              <h5 class="card-title">{{img.title}}</h5>
+
+              <p class="card-text">
+                {{img.subtitle}}
+              </p>
+
+              <hr>
+
+              <p class="card-text">
+                {{ img.date | date: "longDate" }}
+              </p>
+
+          </div>
+
+      </div>
+
+  </div>
+
+</div>

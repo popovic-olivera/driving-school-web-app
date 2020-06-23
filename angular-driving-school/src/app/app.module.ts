@@ -19,6 +19,9 @@ import { PricelistMainComponent } from './pricelist/pricelist-main/pricelist-mai
 import { ContactHeaderComponent } from './contact/contact-header/contact-header.component';
 import { ContactMainComponent } from './contact/contact-main/contact-main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryHeaderComponent } from './gallery/gallery-header/gallery-header.component';
+import { GalleryMainComponent } from './gallery/gallery-main/gallery-main.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     PricelistHeaderComponent,
     PricelistMainComponent,
     ContactHeaderComponent,
-    ContactMainComponent
+    ContactMainComponent,
+    GalleryComponent,
+    GalleryHeaderComponent,
+    GalleryMainComponent
   ],
   imports: [
     BrowserModule,
