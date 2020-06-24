@@ -4,6 +4,11 @@
         
         <h1>Vesti</h1>
 
+        <app-add-news (emitTitle)="setNewTitle($event)"
+                      (emitSubtitle)="setNewSubtitle($event)"
+                      (emitLink)="setNewLink($event)"
+                      (emitPath)="setNewPath($event)"></app-add-news>
+
         <div class="post-preview" *ngFor="let element of news">
             <h2 class="post-title" >
                {{element.title}}
@@ -30,4 +35,4 @@
     </div>
   </div>
 
-  <hr/>
+  <hr>

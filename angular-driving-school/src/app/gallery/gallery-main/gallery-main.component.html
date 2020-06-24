@@ -1,23 +1,27 @@
 <div class="container">
 
+  <app-add-image (emitPath)="setNewPath($event)"
+                 (emitTitle)="setNewTitle($event)"
+                 (emitSubtitle)="setNewSubtitle($event)"></app-add-image>
+
   <div class="card-columns">
-      
+
       <div class="card" *ngFor="let img of images">
 
           <img class="card-img-top" [src]="img.source" [alt]="img.title" />
 
-          <div class="card-body">
+          <div class="card-body post-preview">
 
-              <h5 class="card-title">{{img.title}}</h5>
+              <h5 class="card-title post-title">{{img.title}}</h5>
 
-              <p class="card-text">
+              <p class="card-text post-subtitle">
                 {{img.subtitle}}
               </p>
 
               <hr>
 
-              <p class="card-text">
-                {{ img.date | date: "longDate" }}
+              <p class="card-text post-meta">
+                {{ img.date | serbianDate }}
               </p>
 
           </div>

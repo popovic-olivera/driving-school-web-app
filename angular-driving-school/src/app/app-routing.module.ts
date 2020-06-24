@@ -6,6 +6,7 @@ import { PricelistComponent } from './pricelist/pricelist.component';
 import { ContactComponent } from './contact/contact.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { AddNewsComponent } from './home/home-main/add-news/add-news.component';
 
 
 const routes: Routes = [

@@ -1,0 +1,38 @@
+<div style="margin-top: 50px" class="container col-lg-8 col-md-10 mx-auto">
+    <form class="form-group post-preview">
+        <h3 class="post-subtitle custom-file">Dodaj novu sliku</h3>
+        <br>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Učitaj</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" #path class="custom-file-input" id="img" (change)="onFileSelected($event)">
+              <label class="custom-file-label" for="img">{{tmpPath === null ? 'Odaberi sliku' : tmpPath}}</label>
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Naslov</span>
+            </div>
+            <div class="custom-file">
+                <input type="text" #title class="form-control" id="title" name="title">   
+            </div>
+        </div>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Opis</span>
+            </div>
+            <div class="custom-file">
+                <input type="text" #subtitle class="form-control" id="subtitle" name="subtitle">
+            </div>
+        </div>
+      </form>
+
+    <div class="clearfix">
+        <a class="btn btn-primary" (click)="addImage(path, title, subtitle)">Dodaj</a>
+    </div>
+</div>

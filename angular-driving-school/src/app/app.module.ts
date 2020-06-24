@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +23,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryHeaderComponent } from './gallery/gallery-header/gallery-header.component';
 import { GalleryMainComponent } from './gallery/gallery-main/gallery-main.component';
+import { AddNewsComponent } from './home/home-main/add-news/add-news.component';
+import { SerbianDate } from '../pipes/date.pipe';
+import { AddImageComponent } from './gallery/gallery-main/add-image/add-image.component';
 
 @NgModule({
   declarations: [
@@ -43,14 +47,20 @@ import { GalleryMainComponent } from './gallery/gallery-main/gallery-main.compon
     ContactMainComponent,
     GalleryComponent,
     GalleryHeaderComponent,
-    GalleryMainComponent
+    GalleryMainComponent,
+    AddNewsComponent,
+    SerbianDate,
+    AddImageComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    SerbianDate
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

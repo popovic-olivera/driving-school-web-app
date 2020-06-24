@@ -17,20 +17,18 @@ export class NavbarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   navHeight(): number {
     return this.elementView.nativeElement.offsetHeight;
   }
 
-  @HostListener('window:scroll', ['$event']) 
-  doSomething(event : any) {
-    let currentTop: number = window.pageYOffset;
+  @HostListener('window:scroll', ['$event'])
+  doSomething(event: any) {
+    const currentTop: number = window.pageYOffset;
 
     // Check if user is scrolling up
-    if (currentTop < this.previousTop) 
+    if (currentTop < this.previousTop)
     {
       if (currentTop > 0 && this.fixed)
       {
@@ -41,12 +39,14 @@ export class NavbarComponent implements OnInit {
           this.visible = false;
           this.fixed = false;
       }
-    } 
+    }
     // if scrolling down
-    else if (currentTop > this.previousTop) 
+    else if (currentTop > this.previousTop)
     {
       this.visible = false;
-      if (currentTop > this.navHeight() && !this.fixed) this.fixed = true;
+      if (currentTop > this.navHeight() && !this.fixed) {
+        this.fixed = true;
+      }
     }
 
     this.previousTop = currentTop;
@@ -56,6 +56,6 @@ export class NavbarComponent implements OnInit {
     return {
       'is-fixed': this.fixed,
       'is-visible': this.visible
-    }
+    };
   }
 }

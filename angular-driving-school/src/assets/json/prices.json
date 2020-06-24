@@ -1,0 +1,50 @@
+[
+    {
+        "category": "Teorijska obuka 40 časova",
+        "price": "13 300 dinara"
+    },
+    {
+        "category": "Praktična obuka 40 časova",
+        "price": "48 000 dinara"
+    },
+    {
+        "category": "Polaganje teorijskog ispita",
+        "price": "1 ispit uključen u cenu"
+    },
+    {
+        "category": "Polaganje vožnje",
+        "price": "1 ispit uključen u cenu"
+    },
+    {
+        "category": "Uverenje o položenom ispitu",
+        "price": "besplatno"
+    },
+    {
+        "category": "Ispis",
+        "price": "besplatno"
+    },
+    {
+        "category": "CENA UKUPNO na 12 mesečnih rata",
+        "price": "65 500,00 dinara"
+    },
+    {
+        "category": "Lekarsko uverenje",
+        "price": "besplatno"
+    },
+    {
+        "category": "Polaganje teorijskog testa sa taksom MUP-a",
+        "price": "5000 dinara"
+    },
+    {
+        "category": "Polaganje vožnje sa taksom MUP-a",
+        "price": "5000 dinara"
+    },
+    {
+        "category": "Dodatni čas vožnje",
+        "price": "1200 dinara"
+    },
+    {
+        "category": "Obuka i polaganje PRVE POMOĆI",
+        "price": "5000 dinara"
+    }
+]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Price } from 'src/models/price.model';
+import { PriceService } from 'src/services/price.service';
 
 @Component({
   selector: 'app-pricelist-main',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PricelistMainComponent implements OnInit {
 
-  constructor() { }
+  prices: Price[] = [];
 
-  ngOnInit(): void {
+  constructor(private service: PriceService) { }
+
+  ngOnInit(){
+    this.service.getPrices().subscribe(
+      prices => this.prices = prices,
+      error => console.error(error)
+    );
   }
 
+  onInputChange(event: Event): void {
+    this.service.filterPrices((event.target as HTMLInputElement).value).subscribe(
+      prices => this.prices = prices,
+      error => console.error(error)
+    );
+  }
 }
