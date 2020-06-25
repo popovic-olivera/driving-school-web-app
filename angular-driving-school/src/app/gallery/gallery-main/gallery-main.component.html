@@ -2,7 +2,7 @@
 
   <app-add-image (emitPath)="setNewPath($event)"
                  (emitTitle)="setNewTitle($event)"
-                 (emitSubtitle)="setNewSubtitle($event)"></app-add-image>
+                 (emitSubtitle)="setNewSubtitle($event)" [ngClass]="setClass()"></app-add-image>
 
   <div class="card-columns">
 

@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,7 @@ export class NavbarComponent implements OnInit {
   fixed = false;
   visible = false;
 
-  constructor() { }
+  constructor(public service: UserService) { }
 
   ngOnInit(): void {}
 

@@ -25,6 +25,9 @@ export class AddNewsComponent implements OnInit {
 
   public tmpPath: string = null;
 
+  public titleEnabled = false;
+  public subtitleEnabled = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -32,6 +35,12 @@ export class AddNewsComponent implements OnInit {
 
   onFileSelected(event: Event) {
     this.tmpPath = (event.target as HTMLInputElement).files[0].name;
+  }
+
+  onTitleChange(event: Event) {
+    if ((event.target as HTMLInputElement).value !== ' ') {
+      this.titleEnabled = true;
+    }
   }
 
   addNews(title: HTMLInputElement, subtitle: HTMLInputElement, link: HTMLInputElement, path: HTMLInputElement) {

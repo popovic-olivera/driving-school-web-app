@@ -1,0 +1,50 @@
+[
+  {
+    "username": "admin",
+    "password": "123456",
+    "name": "",
+    "surname": "",
+    "address": "",
+    "city": "",
+    "status": "",
+    "next": "",
+    "debt": "",
+    "msg": ""
+  },
+  {
+    "username": "olipop",
+    "password": "1234",
+    "name": "Olivera",
+    "surname": "Popović",
+    "address": "Ulica Primer 17 ",
+    "city": "Pančevo",
+    "status": "Završena obuka",
+    "next": "/",
+    "debt": "/",
+    "msg": "Uskoro ćete biti obrisani iz baze, pozdrav :)"
+  },
+  {
+    "username": "pera97",
+    "password": "perazdera",
+    "name": "Pera",
+    "surname": "Perić",
+    "address": "Ulica Nova 6",
+    "city": "Beograd",
+    "status": "Položena teorijska obuka",
+    "next": "Polaganje prve pomoći",
+    "debt": "30 000 dinara",
+    "msg": "Rok za uplatu naknade za prvu pomoć istekao je pre tri dana! Molimo uplatite u najkraćem roku."
+  },
+  {
+    "username": "mika123",
+    "password": "00000",
+    "name": "Mika",
+    "surname": "Mikić",
+    "address": "Nikole Tesle 15",
+    "city": "Vršac",
+    "status": "Završena obuka praktičnog dela vozačkog ispita",
+    "next": "Polaganje vozačkog ispita",
+    "debt": "5 000 dinara",
+    "msg": "Očekujte poziv za polaganje vozačkog ispita"
+  }
+]

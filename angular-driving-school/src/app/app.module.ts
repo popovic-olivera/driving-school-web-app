@@ -26,6 +26,7 @@ import { GalleryMainComponent } from './gallery/gallery-main/gallery-main.compon
 import { AddNewsComponent } from './home/home-main/add-news/add-news.component';
 import { SerbianDate } from '../pipes/date.pipe';
 import { AddImageComponent } from './gallery/gallery-main/add-image/add-image.component';
+import { InfoComponent } from './sign-in/info/info.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { AddImageComponent } from './gallery/gallery-main/add-image/add-image.co
     GalleryMainComponent,
     AddNewsComponent,
     SerbianDate,
-    AddImageComponent
+    AddImageComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

@@ -33,6 +33,6 @@
       </form>
 
     <div class="clearfix">
-        <a class="btn btn-primary" (click)="addImage(path, title, subtitle)">Dodaj</a>
+        <button class="btn btn-primary" (click)="addImage(path, title, subtitle)" [disabled]="!tmpPath">Dodaj</button>
     </div>
 </div>

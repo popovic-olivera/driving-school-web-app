@@ -9,7 +9,7 @@
               <span class="input-group-text">Naslov</span>
             </div>
             <div class="custom-file">
-                <input type="text" #title class="form-control" id="title" name="title">   
+                <input type="text" #title (keyup)="onTitleChange($event)" class="form-control" id="title" name="title">   
             </div>
         </div>
 
@@ -43,6 +43,6 @@
     </form>
 
     <div class="clearfix">
-        <button class="btn btn-primary" (click)="addNews(title, subtitle, link, path)" [disabled]="title.value === '' || subtitle.value === ''">Dodaj</button>
+        <button class="btn btn-primary" (click)="addNews(title, subtitle, link, path)" [disabled]="!titleEnabled">Dodaj</button>
     </div>
 </div>

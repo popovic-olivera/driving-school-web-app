@@ -1,17 +1,17 @@
 <section class="form">
     <div class="container">
-	    <div class="row">
+	    <div class="row" [ngClass]="setClass()">
             <div class="col-md-4 login">
                 <h2 class="text-center">Prijavite se</h2>
                 <form class="login-form">
                     <div class="form-group">
                         <label>Korisničko ime</label>
-                        <input type="text" class="form-control" placeholder="Na primer: SunđerBob">
+                        <input type="text" class="form-control" placeholder="Na primer: korisnik" #username>
                     </div>
 
                     <div class="form-group">
                         <label>Lozinka</label>
-                        <input type="password" class="form-control" placeholder="********">
+                        <input type="password" class="form-control" placeholder="********" #password>
                     </div>
 
                     <div class="form-check">
@@ -19,9 +19,10 @@
                             <input type="checkbox" class="form-check-input">
                             <small>Zapamti me</small>
                         </label>
-                        <button type="submit" class="btn btn-login float-right">Sačuvaj</button>
+                        <button type="submit" class="btn btn-login float-right" (click)="signIn(username, password)">Prijavi se</button>
                     </div>
                     <div class="bottom">
+                        <p *ngIf="userDoesntExist" style="color: red">Pogresna šifra ili korisničko ime!</p>
                         <label>
                             Nemate nalog?
                             <a>Registrujte se</a>
@@ -34,7 +35,7 @@
 
                 <div class="backgroundOverlay"></div>
 
-                <div id="slider" class="carousel slide" data-ride="carousel">
+                <div id="slider" class="carousel slide" style="padding:0" data-ride="carousel">
 
                     <ol class="carousel-indicators">
                         <li data-target="#slider" data-slide-to="0" class="active"></li>
@@ -59,7 +60,7 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="banner-text">
                                     <h2>Enzo Ferrari</h2>
-                                    <p>The fact is I don’t drive just to get from A to B. I enjoy feeling the car’s reactions, becoming part of it</p>
+                                    <p>"The fact is I don’t drive just to get from A to B. I enjoy feeling the car’s reactions, becoming part of it."</p>
                                 </div>	
                             </div>
                         </div>
@@ -69,14 +70,15 @@
                             <div class="carousel-caption d-none d-md-block">
                                 <div class="banner-text">
                                     <h2>Elon Musk</h2>
-                                    <p>Self-driving cars are the natural extension of active safety and obviously something we should do.</p>
+                                    <p>"Self-driving cars are the natural extension of active safety and obviously something we should do."</p>
                                 </div>	
                             </div>
                         </div>
                     </div>	   
                 </div>
-
             </div>
         </div>
+
+        <app-info [ngClass]="setInfoClass()" (out)="signOut($event)"></app-info>
     </div>
 </section>

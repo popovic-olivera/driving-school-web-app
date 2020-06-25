@@ -1,0 +1,26 @@
+<div class="info container" style="background-image: url('../../../assets/profile-bg.jpg');">
+    <div class="row">
+        <div class="overlay"></div>
+        <div class="col-lg-8 col-md-10 mx-auto">
+
+            <h1 style="margin-top: 20px; color:white">Moji podaci</h1>
+            
+            <div class="post-preview" *ngIf="service.user !== null && service.user !== undefined && !service.getAdminUser(); else admin">
+                <h3 style="color:white" class="post-meta">Ime: {{service.user.name}}</h3>
+                <h3 style="color:white" class="post-meta">Prezime: {{service.user.surname}}</h3>
+                <h3 style="color:white" class="post-meta">Adresa: {{service.user.address}}</h3>
+                <h3 style="color:white" class="post-meta">Grad: {{service.user.city}}</h3>
+                <h3 style="color:white" class="post-meta">Status: {{service.user.status}}</h3>
+                <h3 style="color:white" class="post-meta">Sledeće: {{service.user.next}}</h3>
+                <h3 style="color:white" class="post-meta">Dug: {{service.user.debt}}</h3>
+                <h3 style="color:white" class="post-meta">Poruka: {{service.user.msg}}</h3>
+            </div>
+            <ng-template #admin>
+                <div>
+                    <h3 style="color:white;" class="post-subtitle">Administrator</h3>
+                </div>
+            </ng-template>
+            <a class="btn btn-primary" style="color:white; border-radius: 5px;" (click)="signOut()">Odjavi se</a>
+        </div>
+    </div>
+</div>

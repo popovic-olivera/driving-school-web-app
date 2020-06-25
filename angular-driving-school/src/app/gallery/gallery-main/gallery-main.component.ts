@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Image } from 'src/models/image.model';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-gallery-main',
@@ -13,7 +14,7 @@ export class GalleryMainComponent implements OnInit {
   private newTitle: string = undefined;
   private newSubtitle: string = undefined;
 
-  constructor() { }
+  constructor(private service: UserService) { }
 
   ngOnInit(): void {
     this.images.push(new Image('../../../assets/gallery/chickHicks.jpg', 'Chick Hiks', 'Autići', new Date('2020-05-01')));
@@ -49,5 +50,11 @@ export class GalleryMainComponent implements OnInit {
     this.newPath = undefined;
     this.newTitle = undefined;
     this.newSubtitle = undefined;
+  }
+
+  setClass() {
+    if (!this.service.getAdminUser()) {
+      return 'non-visible';
+    }
   }
 }

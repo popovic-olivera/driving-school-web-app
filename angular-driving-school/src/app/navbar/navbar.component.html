@@ -32,7 +32,10 @@
           </li>
           
           <li class="nav-item nav-pills">
-            <a class="nav-link active" [routerLink]="['/signIn']">Prijava</a>
+            <a class="nav-link active" [routerLink]="['/signIn']" *ngIf="service.user === null || service.user === undefined; else userSignedIn">Prijava</a>
+            <ng-template #userSignedIn>
+              <a class="nav-link active" [routerLink]="['/signIn']">Vaš profil</a>
+            </ng-template>
           </li>
         </ul>
 

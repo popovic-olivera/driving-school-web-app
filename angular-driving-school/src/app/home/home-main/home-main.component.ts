@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NewsService } from 'src/services/news.service';
 import { News } from 'src/models/news.model';
 import { SerbianDate } from 'src/pipes/date.pipe';
+import { UserService } from 'src/services/user.service';
 
 @Component({
   selector: 'app-home-main',
@@ -16,7 +17,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
   private newLink: string = undefined;
   private newPath: string = undefined;
 
-  constructor(private service: NewsService, private pipe: SerbianDate) {}
+  constructor(private service: NewsService, private pipe: SerbianDate, private service2: UserService) {}
 
   ngOnInit() {
     this.service.getNews().subscribe(
@@ -72,5 +73,11 @@ export class HomeMainComponent implements OnInit, OnDestroy {
     this.newSubtitle = undefined;
     this.newLink = undefined;
     this.newPath = undefined;
+  }
+
+  setClass() {
+    if (!this.service2.getAdminUser()) {
+      return 'non-visible';
+    }
   }
 }
