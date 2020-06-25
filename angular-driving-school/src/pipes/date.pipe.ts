@@ -3,6 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'serbianDate'
 })
+
 export class SerbianDate implements PipeTransform {
 
   transform(date: Date): string {

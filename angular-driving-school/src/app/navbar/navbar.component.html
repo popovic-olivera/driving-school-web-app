@@ -1,46 +1,45 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="nav" #navigation [ngClass]="getClass()">
+  <div class="container">
 
-    <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']">Auto Škola Srećko 🍀 </a>
 
-      <a class="navbar-brand" [routerLink]="['/']">Auto Škola Srećko 🍀 </a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-      </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
 
-      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']">Početna</a>
+        </li>
 
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/']">Početna</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/aboutSchool']">O školi</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/aboutSchool']">O školi</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/pricelist']">Cenovnik</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/pricelist']">Cenovnik</a>
-          </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/gallery']">Galerija</a>
+        </li>
 
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/gallery']">Galerija</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" [routerLink]="['/contact']">Kontakt</a>
-          </li>
-          
-          <li class="nav-item nav-pills">
-            <a class="nav-link active" [routerLink]="['/signIn']" *ngIf="service.user === null || service.user === undefined; else userSignedIn">Prijava</a>
-            <ng-template #userSignedIn>
-              <a class="nav-link active" [routerLink]="['/signIn']">Vaš profil</a>
-            </ng-template>
-          </li>
-        </ul>
-
-      </div>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/contact']">Kontakt</a>
+        </li>
+        
+        <li class="nav-item nav-pills">
+          <a class="nav-link active" [routerLink]="['/signIn']" *ngIf="service.user === null || service.user === undefined; else userSignedIn">Prijava</a>
+          <ng-template #userSignedIn>
+            <a class="nav-link active" [routerLink]="['/signIn']">Vaš profil</a>
+          </ng-template>
+        </li>
+      </ul>
 
     </div>
 
-  </nav>
+  </div>
+</nav>

@@ -9,7 +9,7 @@ import { Vehicle } from 'src/models/vehicle.model';
 
 export class AboutMainComponent implements OnInit {
 
-  vehicles: Vehicle[] = [];
+  public vehicles: Vehicle[] = [];
 
   constructor() {
     this.vehicles.push(new Vehicle('A', '../../../assets/vehicles/motorcycle.png'));
@@ -18,8 +18,7 @@ export class AboutMainComponent implements OnInit {
     this.vehicles.push(new Vehicle('F', '../../../assets/vehicles/tractor.png'));
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onEnter(index: number): void {
     const image = this.vehicles[index].image;

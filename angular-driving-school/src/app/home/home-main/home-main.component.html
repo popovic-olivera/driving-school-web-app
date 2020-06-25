@@ -9,22 +9,22 @@
                       (emitLink)="setNewLink($event)"
                       (emitPath)="setNewPath($event)" [ngClass]="setClass()"></app-add-news>
 
-        <div class="post-preview" *ngFor="let element of news">
-            <h2 class="post-title" >
-               {{element.title}}
-            </h2>
-            <h3 class="post-subtitle">
-              <a href={{element.link}} target="_blank" *ngIf='element.link !== ""'>KLIKNI OVDE <br/> </a> 
-              
-              {{element.subtitle}}
+        <div class="post-preview" *ngFor="let n of service.news">
 
-              <img src={{element.image}} alt="Slika vesti" *ngIf='element.image !== ""'/>
-            </h3>
-            <p class="post-meta">
-            {{element.date}}
-            </p>
+          <h2 class="post-title" >{{n.title}}</h2>
 
-            <hr>
+          <h3 class="post-subtitle">
+            <a href={{n.link}} target="_blank" *ngIf='n.link !== ""'>KLIKNI OVDE <br/> </a> 
+            
+            {{n.subtitle}}
+
+            <img src={{n.image}} alt="Slika vesti" *ngIf='n.image !== ""'/>
+          </h3>
+
+          <p class="post-meta">{{n.date}}</p>
+
+          <hr>
+
         </div>
 
         <div class="clearfix">

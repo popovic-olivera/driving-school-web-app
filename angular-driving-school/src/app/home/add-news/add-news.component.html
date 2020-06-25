@@ -1,6 +1,7 @@
 <div style="margin-top: 50px" class="container">
 
     <form class="form-group post-preview">
+
         <h3 class="post-subtitle custom-file">Dodaj novu vest:</h3>
         <br>
 
@@ -9,7 +10,7 @@
               <span class="input-group-text">Naslov</span>
             </div>
             <div class="custom-file">
-                <input type="text" #title (keyup)="onTitleChange($event)" class="form-control" id="title" name="title">   
+              <input type="text" #title (keyup)="onTitleChange($event)" class="form-control" id="title" name="title">   
             </div>
         </div>
 
@@ -18,7 +19,7 @@
               <span class="input-group-text">Podnaslov</span>
             </div>
             <div class="custom-file">
-                <input type="text" #subtitle class="form-control" id="subtitle" name="subtitle">
+              <input type="text" #subtitle class="form-control" id="subtitle" name="subtitle">
             </div>
         </div>
 
@@ -27,7 +28,7 @@
               <span class="input-group-text">Link</span>
             </div>
             <div class="custom-file">
-                <input type="text" #link class="form-control" id="link" name="link">
+              <input type="text" #link class="form-control" id="link" name="link">
             </div>
         </div>
 
@@ -40,9 +41,12 @@
               <label class="custom-file-label" for="img">{{tmpPath === null ? 'Odaberi sliku' : tmpPath}}</label>
             </div>
         </div>
+        <h2 class="post-meta">Odaberi sliku iz foldera 'news' (radi bezbednosti)</h2>
+
     </form>
 
     <div class="clearfix">
-        <button class="btn btn-primary" (click)="addNews(title, subtitle, link, path)" [disabled]="!titleEnabled">Dodaj</button>
+      <button class="btn btn-primary" (click)="addNews(title, subtitle, link, path)" [disabled]="!titleEnabled">Dodaj</button>
     </div>
+
 </div>

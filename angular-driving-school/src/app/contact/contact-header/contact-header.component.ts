@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact-header.component.html',
   styleUrls: ['./contact-header.component.css', '../../../styles/header-style.css']
 })
+
 export class ContactHeaderComponent implements OnInit {
 
   constructor() { }

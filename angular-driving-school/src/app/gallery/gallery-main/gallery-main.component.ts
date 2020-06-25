@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'src/models/image.model';
-import { UserService } from 'src/services/user.service';
+import { Image } from '../../../models/image.model';
+import { UserService } from '../../../services/user.service';
+import { ImageService } from '../../../services/image.service';
 
 @Component({
   selector: 'app-gallery-main',
@@ -9,20 +10,14 @@ import { UserService } from 'src/services/user.service';
 })
 export class GalleryMainComponent implements OnInit {
 
-  public images: Image[] = [];
   private newPath: string = undefined;
   private newTitle: string = undefined;
   private newSubtitle: string = undefined;
 
-  constructor(private service: UserService) { }
+  constructor(public imgService: ImageService, private service: UserService) { }
 
   ngOnInit(): void {
-    this.images.push(new Image('../../../assets/gallery/chickHicks.jpg', 'Chick Hiks', 'Autići', new Date('2020-05-01')));
-    this.images.push(new Image('../../../assets/gallery/docHudson.jpg', 'Doc Hudson', 'Autići', new Date('2020-05-10')));
-    this.images.push(new Image('../../../assets/gallery/lightningMcqueen.jpg', 'Lightning Mcquee', 'Autići', new Date('2020-05-16')));
-    this.images.push(new Image('../../../assets/gallery/ramone.png', 'Ramone', 'Autići', new Date('2020-06-07')));
-    this.images.push(new Image('../../../assets/gallery/sallyCarrera.jpg', 'Sally Carrera', 'Autići', new Date('2020-06-15')));
-    this.images.push(new Image('../../../assets/gallery/mater.jpg', 'Mater', 'Autići', new Date('2020-05-26')));
+    this.imgService.createImages();
   }
 
   setNewPath(path: string): void {
@@ -45,7 +40,7 @@ export class GalleryMainComponent implements OnInit {
       return;
     }
 
-    this.images.unshift(new Image('../../../assets/gallery/' + this.newPath, this.newTitle, this.newSubtitle, new Date()));
+    this.imgService.images.unshift(new Image('../../../assets/gallery/' + this.newPath, this.newTitle, this.newSubtitle, new Date()));
 
     this.newPath = undefined;
     this.newTitle = undefined;
@@ -57,4 +52,5 @@ export class GalleryMainComponent implements OnInit {
       return 'non-visible';
     }
   }
+
 }

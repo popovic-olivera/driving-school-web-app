@@ -3,8 +3,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 @Component({
   selector: 'app-add-image',
   templateUrl: './add-image.component.html',
-  styleUrls: ['./add-image.component.css', '../../../../styles/main-style.css']
+  styleUrls: ['./add-image.component.css', '../../../styles/main-style.css']
 })
+
 export class AddImageComponent implements OnInit {
 
   @Output()

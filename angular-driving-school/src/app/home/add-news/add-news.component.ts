@@ -3,7 +3,7 @@ import { Component, OnInit, ElementRef, ViewChild, EventEmitter, Output } from '
 @Component({
   selector: 'app-add-news',
   templateUrl: './add-news.component.html',
-  styleUrls: ['./add-news.component.css', '../../../../styles/main-style.css']
+  styleUrls: ['./add-news.component.css', '../../../styles/main-style.css']
 })
 
 export class AddNewsComponent implements OnInit {
@@ -13,6 +13,7 @@ export class AddNewsComponent implements OnInit {
 
   @Output()
   public emitTitle: EventEmitter<string> = new EventEmitter<string>();
+  public titleEnabled = false;
 
   @Output()
   public emitSubtitle: EventEmitter<string> = new EventEmitter<string>();
@@ -22,37 +23,34 @@ export class AddNewsComponent implements OnInit {
 
   @Output()
   public emitPath: EventEmitter<string> = new EventEmitter<string>();
-
   public tmpPath: string = null;
-
-  public titleEnabled = false;
-  public subtitleEnabled = false;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   onFileSelected(event: Event) {
     this.tmpPath = (event.target as HTMLInputElement).files[0].name;
   }
 
   onTitleChange(event: Event) {
+    // Title needs to have at least one character, which is not space
     if ((event.target as HTMLInputElement).value !== ' ') {
       this.titleEnabled = true;
     }
   }
 
   addNews(title: HTMLInputElement, subtitle: HTMLInputElement, link: HTMLInputElement, path: HTMLInputElement) {
-    const t: string = title.value;
-    const s: string = subtitle.value;
-    const l: string = link.value;
+    const ttileValue: string = title.value;
+    const subtitleValue: string = subtitle.value;
+    const linkValue: string = link.value;
 
-    this.emitTitle.emit(t);
-    this.emitSubtitle.emit(s);
-    this.emitLink.emit(l);
+    this.emitTitle.emit(ttileValue);
+    this.emitSubtitle.emit(subtitleValue);
+    this.emitLink.emit(linkValue);
     this.emitPath.emit(this.tmpPath);
 
+    // Reset all values for next use
     title.value = '';
     subtitle.value = '';
     link.value = '';

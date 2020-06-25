@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeHeaderComponent implements OnInit {
 
+  public type = 'Auto škola';
+  public name = 'Srećko';
+  public subtitle = 'Najpovoljnija auto škola u Pančevu!';
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

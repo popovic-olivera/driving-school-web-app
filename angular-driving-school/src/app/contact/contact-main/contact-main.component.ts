@@ -6,9 +6,10 @@ import { ContactInfo } from 'src/models/contact-info.model';
   templateUrl: './contact-main.component.html',
   styleUrls: ['./contact-main.component.css', '../../../styles/main-style.css']
 })
+
 export class ContactMainComponent implements OnInit {
 
-  information: ContactInfo[] = [];
+  public information: ContactInfo[] = [];
 
   constructor() {
     this.information.push(new ContactInfo('Lokacija', 'Zmaj Jove Jovanovića 20, Pančevo'));
@@ -16,7 +17,6 @@ export class ContactMainComponent implements OnInit {
     this.information.push(new ContactInfo('Radno vreme', 'Radnim danima od 8:30 do 15:30, a subotom od 8:00 do 13:00.'));
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

@@ -9,28 +9,22 @@ import { UserService } from 'src/services/user.service';
   templateUrl: './home-main.component.html',
   styleUrls: ['./home-main.component.css', '../../../styles/main-style.css']
 })
+
 export class HomeMainComponent implements OnInit, OnDestroy {
 
-  news: News[] = [];
   private newTitle: string = undefined;
   private newSubtitle: string = undefined;
   private newLink: string = undefined;
   private newPath: string = undefined;
 
-  constructor(private service: NewsService, private pipe: SerbianDate, private service2: UserService) {}
+  constructor(public service: NewsService, private service2: UserService, private pipe: SerbianDate) {}
 
   ngOnInit() {
-    this.service.getNews().subscribe(
-      news => this.news = news,
-      error => console.error(error)
-    );
+    this.service.getNews();
   }
 
   loadOlderNews(): void {
-    this.service.loadNews().subscribe(
-      news => this.news = news,
-      error => console.error(error)
-    );
+    this.service.loadNews();
   }
 
   ngOnDestroy(): void {
@@ -39,35 +33,35 @@ export class HomeMainComponent implements OnInit, OnDestroy {
 
   setNewTitle(title: string): void {
     this.newTitle = title;
-    this.addNewImage();
+    this.addNews();
   }
 
   setNewSubtitle(subtitle: string): void {
     this.newSubtitle = subtitle;
-    this.addNewImage();
+    this.addNews();
   }
 
   setNewLink(link: string): void {
     this.newLink = link;
-    this.addNewImage();
+    this.addNews();
   }
 
   setNewPath(path: string): void {
     this.newPath = path;
-    this.addNewImage();
+    this.addNews();
   }
 
-  addNewImage(): void {
+  addNews(): void {
     if (this.newPath === undefined || this.newTitle === undefined ||
         this.newSubtitle === undefined || this.newLink === undefined) {
       return;
     }
 
-    this.news.unshift(new News(this.newTitle,
-                               this.newSubtitle,
-                               this.pipe.transform(new Date()),
-                               this.newLink,
-                               this.newPath === null ? '' : '../../../assets/' + this.newPath));
+    this.service.news.unshift(new News(this.newTitle,
+                                       this.newSubtitle,
+                                       this.pipe.transform(new Date()),
+                                       this.newLink,
+                                       this.newPath === null ? '' : '../../../assets/news/' + this.newPath));
 
     this.newTitle = undefined;
     this.newSubtitle = undefined;
@@ -76,6 +70,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
   }
 
   setClass() {
+    // Set not visible if non admin user signed in
     if (!this.service2.getAdminUser()) {
       return 'non-visible';
     }
