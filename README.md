@@ -1,27 +1,17 @@
-# AngularDrivingSchool
+# :blue_car: Driving school - Angular app
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.6.
+- This app was created as part of the faculty course about Angular, held by FIS.
 
-## Development server
+- App is live at https://popovic-olivera.github.io/driving-school-web-app/
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+- Used Angular CLI version 9.1.6.
 
-## Code scaffolding
+## :hammer: Run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- git clone https://github.com/popovic-olivera/driving-school-web-app.git
 
-## Build
+- npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+- ng serve
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- open http://localhost:4200/
