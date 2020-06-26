@@ -61,7 +61,7 @@ export class HomeMainComponent implements OnInit, OnDestroy {
                                        this.newSubtitle,
                                        this.pipe.transform(new Date()),
                                        this.newLink,
-                                       this.newPath === null ? '' : '../../../assets/news/' + this.newPath));
+                                       this.newPath === null ? '' : 'assets/news/' + this.newPath));
 
     this.newTitle = undefined;
     this.newSubtitle = undefined;

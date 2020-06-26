@@ -12,10 +12,10 @@ export class AboutMainComponent implements OnInit {
   public vehicles: Vehicle[] = [];
 
   constructor() {
-    this.vehicles.push(new Vehicle('A', '../../../assets/vehicles/motorcycle.png'));
-    this.vehicles.push(new Vehicle('B', '../../../assets/vehicles/car.png'));
-    this.vehicles.push(new Vehicle('C', '../../../assets/vehicles/truck.png'));
-    this.vehicles.push(new Vehicle('F', '../../../assets/vehicles/tractor.png'));
+    this.vehicles.push(new Vehicle('A', 'assets/vehicles/motorcycle.png'));
+    this.vehicles.push(new Vehicle('B', 'assets/vehicles/car.png'));
+    this.vehicles.push(new Vehicle('C', 'assets/vehicles/truck.png'));
+    this.vehicles.push(new Vehicle('F', 'assets/vehicles/tractor.png'));
   }
 
   ngOnInit(): void {}

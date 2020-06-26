@@ -40,7 +40,7 @@ export class GalleryMainComponent implements OnInit {
       return;
     }
 
-    this.imgService.images.unshift(new Image('../../../assets/gallery/' + this.newPath, this.newTitle, this.newSubtitle, new Date()));
+    this.imgService.images.unshift(new Image('assets/gallery/' + this.newPath, this.newTitle, this.newSubtitle, new Date()));
 
     this.newPath = undefined;
     this.newTitle = undefined;
